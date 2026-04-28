@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Surprise 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+    <div class="bg-orb orb-c" aria-hidden="true"></div>
+
+    <main class="card" role="main">
+      <header class="hero">
+        <p class="tag">✨ It’s your special day ✨</p>
+        <h1>Happy Birthday, <span id="friend-name">Bestie</span>!</h1>
+        <p class="message">
+          Wishing you a day full of sparkles, cake, and happy memories. You make life brighter and I’m so lucky to celebrate
+          you today!
+        </p>
+      </header>
+
+      <section class="panel cake-panel" aria-label="Birthday cake celebration">
+        <h2>Make a Birthday Wish</h2>
+        <div class="cake" aria-label="Birthday cake illustration">
+          <div class="candles" id="candles">
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+          </div>
+          <div class="layer top"></div>
+          <div class="layer middle"></div>
+          <div class="layer bottom"></div>
+        </div>
+
+        <div class="actions">
+          <button id="surprise-btn" type="button">Open Surprise 💝</button>
+          <button id="blow-btn" type="button">Blow Candles 🕯️</button>
+          <button id="music-btn" type="button">Play Birthday Tune 🎵</button>
+        </div>
+
+        <p id="surprise-text" class="surprise-text" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Memory Lane</h2>
+        <div class="memory-grid" id="memory-grid">
+          <article class="memory-card">
+            <h3>🌸 Favorite Moment</h3>
+            <p>The day we laughed so hard we cried at absolutely nothing.</p>
+          </article>
+          <article class="memory-card">
+            <h3>🌈 Adventure Goal</h3>
+            <p>This year we’re definitely planning our dream mini road trip.</p>
+          </article>
+          <article class="memory-card">
+            <h3>💫 Friendship Magic</h3>
+            <p>Your kindness and humor make every normal day feel special.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Birthday Quest</h2>
+        <p class="quest-copy">Tap each task to complete your birthday mission!</p>
+        <ul class="quest-list" id="quest-list">
+          <li><button class="quest-item" type="button">Eat cake 🍰</button></li>
+          <li><button class="quest-item" type="button">Make a wish 🌠</button></li>
+          <li><button class="quest-item" type="button">Dance break 💃</button></li>
+          <li><button class="quest-item" type="button">Take a happy photo 📸</button></li>
+        </ul>
+        <div class="progress-wrap" aria-label="Birthday quest progress">
+          <div id="quest-progress" class="progress-bar"></div>
+        </div>
+        <p id="quest-text" class="quest-text">0 / 4 tasks completed.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
